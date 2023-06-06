@@ -15,7 +15,6 @@ const Header = () => {
   const decrement = () =>{
     setCount(count-1)
   }
-  
   return (
     <>
     <h1 className='bg-warning text-white'>useState Hook in React</h1>
