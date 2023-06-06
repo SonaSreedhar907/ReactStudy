@@ -1,20 +1,12 @@
 import './App.css';
 import React from 'react';
-import States from "./components/States"
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { Container } from 'react-bootstrap';
+import Main from "./components/conditional/Main"
 
 function App() {
-    const states = [
-      {name:"kerala",language:"malayalam",population:1000},
-      {name:"tamilnadu",language:"tamil",population:2000},
-      {name:"karnataka",language:"kannada",population:3000}
-    ];
   return (
    <div className='App'>
-    <Container>
-        <States states={states} />
-    </Container>
+    <Main isLoggedin={false}/>
    </div>
   );
     
