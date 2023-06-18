@@ -5,7 +5,7 @@ const Profile = (props) => {
   return (
     <div style={{backgroundColor:"blue"}}>
         <h1>Profile</h1>
-        <One data={props.data}></One>
+        <One></One>
     </div>
   )
 }

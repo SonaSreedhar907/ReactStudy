@@ -1,11 +1,11 @@
 import React from 'react'
 import Two from './Two'
 
-const one = (props) => {
+const one = () => {
   return (
     <div style={{backgroundColor:"yellow",width:'500px'}}>
         <h1>Layer one</h1>
-        <Two data={props.data}></Two>
+        <Two ></Two>
     </div>
   )
 }
