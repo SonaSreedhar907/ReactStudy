@@ -1,22 +1,29 @@
 import './App.css';
-import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import Products from "./components/Products/Products"
-import { Container } from 'react-bootstrap';
-import Effects from "./components/Effects/Effects"
+import About from './components/Container/About';
+import Profile from './components/Container/Profile';
+import { Routes, Route,useNavigate } from 'react-router-dom';
+import { useState } from 'react';
 
 function App() {
+  const [state,setState] = useState(10)
+  const navigate = useNavigate();
+ 
   return (
-   <div className="App">
-    <Container>
-      <Effects />
-    </Container>  
-   </div>
+    <div className="App">
+      <button onClick={() => navigate('/about')}>About me</button>
+      <button onClick={() => navigate('/profile')}>Profile</button>
+      
+      <Routes>
+        <Route path="/about" element={<About />} />
+        <Route
+          path="/profile"
+          element={<Profile data={state} />}
+        />
+      </Routes>
+      
+    </div>
   );
-    
-   
-
-
 }
 
 export default App;

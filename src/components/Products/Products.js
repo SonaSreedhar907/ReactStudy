@@ -5,6 +5,7 @@ import {Card,Button} from "react-bootstrap";
 const Product = () => {
   const [items,setItems] = useState(PhonesData)
 
+
   const decQty=(id) =>{
       const newItem = items.map((item)=>
         item.id === id && item.qty>1 ?{...item,qty:item.qty-1}:item
